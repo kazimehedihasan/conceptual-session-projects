@@ -4,24 +4,14 @@
 import "./Title.css";
 import "./Views.css";
 
-const pStyles = {
-  color: "red",
-  fontSize: "16px",
-};
 
-const viewsItem = {
-  views: "100k",
-};
-
-const resultSum = (a, b) => {
-  return a + b;
-};
-const Card = () => {
-  const title = "";
+const Card = (props) => {
+console.log(props.item);
   return (
     <div className=" card w-full bg-base-100 shadow-xl ">
-      <img className="w-80" src="./images/kazi mehedi.jpg" alt="" />
       <div className="card-body">
+      <img className="w-80" src="./images/kazi mehedi.jpg" alt="" />
+
         <h1
           style={{
             textAlign: "center",
@@ -30,15 +20,15 @@ const Card = () => {
             color: "green",
           }}
         >
-          Shape of You
+         {props.Shape}
         </h1>
-        <p className="title-class">{title? title:"not found"}</p>
-        <p style={pStyles}>
-          dolor sit amet consectetur adipisicing elit. Qui minus pro
-        </p>
-        <p className="views-class">{viewsItem.views}</p>
+        <p className="title-class">{props.item.name} </p>
+        <p>
 
-        <p className="text-center">{resultSum(100, 200)}</p>
+        </p>
+        <p className="views-class">{props.item.id}</p>
+
+        <p className="text-center">{}</p>
       </div>
     </div>
   );
